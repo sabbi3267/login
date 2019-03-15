@@ -372,7 +372,7 @@ class Customer {
                <a button type='submit' class='btn btn-success'href='https://github.com/sabbi3267/crud00' target='_blank'>Github</a><br />
 				<a button type='submit' class='btn btn-success'href='http://csis.svsu.edu/~nalam/cis355/crudoo/uml' target='_blank'>Uml</a><br />
 				
-				<a button type='submit' class='btn btn-success' href='http://csis.svsu.edu/~nalam/cis355/crudoo/ufg' target='_blank'>User Flow Diagram</a><br />
+				<a button type='submit' class='btn btn-success' href='https://app.flowmapp.com/share/4cb07449fea2e67392ef9ac7458d0a22/userflow/22594' target='_blank'>User Flow Diagram</a><br />
                 <div class='container'>
                     <p class='row'>
                         <h3>$this->title" . "s" . "</h3>
