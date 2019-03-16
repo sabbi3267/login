@@ -184,8 +184,8 @@ class Customer {
      *   it only changes the content of the database)
      * - Precondition: Public variables set (name, email, mobile)
      *   and database connection variables are set in datase.php.
-     * - Postcondition: The record is removed from the database table, 
-     *   and user is redirected to the List screen (if no errors), 
+     * - Postcondition: The record is removed from the database table
+     *   and user is redirected to the List screen (if no errors)
      */
     function delete_db_record($id) {
         $pdo = Database::connect();
@@ -354,6 +354,8 @@ class Customer {
      * - Input: loading the page
      * - Processing: query (SQL)
      * - Output: displays all the records in the database in the table
+     * - Precondition: if there is any record in the database it will bring the 
+     * - Postcondition: 
      */
     function list_records() {
         echo "<!DOCTYPE html>
