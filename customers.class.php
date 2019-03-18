@@ -1,3 +1,4 @@
+// code partially copied from https://csis.svsu.edu/~gpcorser/cis355wi19/crud_oo_complete
 <?php
 
 class Customer { 
@@ -23,7 +24,7 @@ class Customer {
      * - Post-conditon: After the input goes back to customers.php
      */
     
-    function create_record() { // display "create" form
+    function create_record() { // displays "create" form on page
         $this->generate_html_top (1);
         $this->generate_form_group("name", $this->nameError, $this->name, "autofocus");
         $this->generate_form_group("email", $this->emailError, $this->email);
@@ -40,7 +41,7 @@ class Customer {
      * - Pre-condition: If there is nothing in the list wouldnot show the button
      * - Post-conditon: The back button would take back to main page
      */
-    function read_record($id) { // display "read" form
+    function read_record($id) { // displays "read" form on page
         $this->select_db_record($id);
         $this->generate_html_top(2);
         $this->generate_form_group("name", $this->nameError, $this->name, "disabled");
@@ -74,7 +75,7 @@ class Customer {
      * - Pre-condition: If there is nothing in the list the button wouldnt showup
      * - Post-conditon: After the input goes back to customers.php
      */
-    function delete_record($id) { // display "read" form
+    function delete_record($id) { // displays "delete" form on page
         $this->select_db_record($id);
         $this->generate_html_top(4, $id);
         $this->generate_form_group("name", $this->nameError, $this->name, "disabled");
@@ -101,8 +102,8 @@ class Customer {
      */
 
     function insert_db_record () {
-        if ($this->fieldsAllValid()) { // validate user input
-            // if valid data, insert record into table
+        if ($this->fieldsAllValid()) { 
+            
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			$this->password_hashed = MD5($this->password);
@@ -170,7 +171,7 @@ class Customer {
         }
         else {
             $this->noerrors = false;
-            $this->update_record($id);  // go back to "update" form
+            $this->update_record($id);  
         }
     } // end function update_db_record 
     
