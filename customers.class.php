@@ -381,7 +381,7 @@ class Customer {
                     </p>
                     <p>
                         <a href='$this->tableName.php?fun=display_create_form' class='btn btn-success'>Create</a>
-                        <a href='logout.php' class='btn btn-warning'>Logout</a> 
+                        <a href='logout.php' class='btn btn-danger'>Logout</a> 
                     </p>
                     <div class='row'>
                         <table class='table table-striped table-bordered'>
